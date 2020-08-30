@@ -2,13 +2,14 @@ import React, {useState, Fragment} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PositionCard from './components/PositionCard';
-import { Jumbotron, Button, Row, Col, Fade, } from 'reactstrap';
+import { Jumbotron, Button, Row, Col, Fade, Container, } from 'reactstrap';
 import Footer from './components/Footer';
 import FormPage from './components/FormPage';
+import PositionPaginator from './components/PositionPaginator';
+
 
 function App()
-{
-    
+{    
   const [fadeIn, setFadeIn] = useState(false);
 
     const toggle = () => setFadeIn(!fadeIn);
@@ -31,6 +32,7 @@ function App()
        
           </Jumbotron>
         </div>
+        <Container>
         <Row>
           <Col xs={"6"}>
             <PositionCard />
@@ -45,7 +47,19 @@ function App()
             <PositionCard />
           </Col>
         </Row>
-      
+
+        <Row>
+        <Col sm="12" md={{ size: 8, offset: 4 }}>
+          <PositionPaginator 
+            activePage={1}
+            itemsCountPerPage={10}
+            totalItemsCount={450}
+            pageRangeDisplayed={5}
+          />
+        </Col>
+      </Row>
+      </Container>
+         
         <Footer />
       </div>
     );

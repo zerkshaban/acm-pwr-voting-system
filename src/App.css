@@ -81,3 +81,16 @@
 }
 @import '~mdb-ui-kit/css/mdb.min.css';
 
+
+
+.pagination {
+  display: inline-block;
+  float: center;
+}
+
+.pagination a {
+  color: black;
+  float: center;
+  padding: 8px 16px;
+  text-decoration: none;
+}

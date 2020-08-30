@@ -16,6 +16,7 @@ function PositionCard()
       <div>
         <Card className={"hvr-grow-shadow"}>
           <Row>
+
             <Col xs={"4"}>
               <div style={{ width: "200px", float: 'left' }}>
                 <CardImg src={img} alt="Card image cap" />
